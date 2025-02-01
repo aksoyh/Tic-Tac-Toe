@@ -1,0 +1,72 @@
+Title: Enhanced Tic-tac-toe: A Web-based Implementation with Time Constraints
+Good morning/afternoon everyone,
+Today, I'd like to present our enhanced version of the classic Tic-tac-toe game, which we've implemented as a web application with some unique twists and challenges.
+Project Overview
+Our goal was to create a web-based Tic-tac-toe game that maintains the traditional 3x3 grid structure but introduces additional gameplay mechanics to make it more challenging and engaging. We implemented this using HTML, CSS, and JavaScript, making it accessible to anyone with a web browser.
+Key Features
+Traditional Gameplay Elements
+3x3 game board
+Two players: X and O
+Classic winning conditions (3 in a row, column, or diagonal)
+Unique Game Mechanics
+10-second time limit per move after a player's second move
+Automatic removal of oldest move when time expires
+Move tracking system for each player
+Real-time timer display
+Technical Implementation
+We structured our solution using:
+HTML for the game board structure
+CSS Grid for layout and styling
+JavaScript for game logic and interactivity
+Challenges Faced and Solutions
+Move Management Challenge
+Initially struggled with tracking moves for each player
+Solved by implementing a 'moves' object that maintains separate arrays for X and O
+   let moves = {'X': [], 'O': []};
+Timer Implementation
+Challenge: Needed to track time accurately without affecting gameplay
+Solution: Implemented a non-blocking timer using setInterval
+Added visual feedback showing remaining time
+Move Removal Logic
+Major challenge: Removing oldest move while maintaining game state
+Initially faced issues where new moves wouldn't appear after old move removal
+Solved by restructuring the move handling sequence:
+1. Add new move first
+Check and remove old move if necessary
+Update move history
+User Interface Considerations
+Needed clear visual feedback for:
+Current player's turn
+Time remaining
+Game status (win/draw)
+Solved through real-time DOM updates and clear status messages
+Code Structure Improvements
+We organized our code into distinct functions:
+createBoard() for initial setup
+handleMove() for move processing
+checkWinner() for win conditions
+disableBoard() for game end handling
+Testing and Refinement
+We encountered and fixed several edge cases:
+Multiple moves within time limit
+Timing issues with move removal
+Win condition checking after move removal
+Browser compatibility issues
+Future Enhancements
+Potential improvements we've identified:
+Adding an AI opponent
+Implementing a scoring system
+Adding game history
+Creating different difficulty levels
+Adding multiplayer support
+Learning Outcomes
+This project helped us understand:
+Complex state management in JavaScript
+Real-time event handling
+DOM manipulation
+Time-based game mechanics
+User experience considerations
+Conclusion
+This enhanced version of Tic-tac-toe demonstrates how classic games can be reimagined with modern web technologies. The addition of time constraints and move management creates a new layer of strategy while maintaining the game's fundamental appeal.
+Thank you for your attention. Are there any questions?
+---
